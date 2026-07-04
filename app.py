@@ -1,11 +1,9 @@
 import streamlit as st
 import joblib
 import numpy as np
-import os
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-model = joblib.load(os.path.join(current_dir, 'loan_default_model.pkl'))
-scaler = joblib.load(os.path.join(current_dir, 'scaler.pkl'))
+model = joblib.load('loan_default_model.pkl')
+scaler = joblib.load('scaler.pkl')
 
 st.title("Loan Default Predictor")
 st.write("Enter the loan details below to predict if a person will default.")
